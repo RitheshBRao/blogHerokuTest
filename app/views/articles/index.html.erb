@@ -1,0 +1,21 @@
+
+<h1>Listing all articles</h1>
+
+<h2>Hello, Rails!</h2>
+<%= link_to 'New article', new_article_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'click here', article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
